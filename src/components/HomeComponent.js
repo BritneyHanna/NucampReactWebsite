@@ -20,11 +20,18 @@ function Home(props) {
                         item={props.promotion}
                         isLoading={props.promotionLoading}
                         errMess={props.promotionErrMess}
+                       
                     />
                 </div>
                 <div className="col-md m-1">
-                    <RenderCard item={props.partner} />
+                    <RenderCard item={props.partners}
+                     
+                    isLoading={props.isLoading}
+                    errMess={props.errMess}
+                    />
                 </div>
+
+                {/* props are coming from the state in the partners.js */}
             </div>
         </div>
     );
@@ -50,6 +57,9 @@ function RenderCard({item, isLoading, errMess}) {
                 </CardBody>
             </Card>
         </FadeTransform>
-    );
+  
+
+     );
+    
 }
 export default Home;  
